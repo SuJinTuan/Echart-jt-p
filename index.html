@@ -6,10 +6,45 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>数据可视化</title>
   <link rel="stylesheet" href="css/index.css">
+  <link rel="stylesheet/less" type="text/css" href="css/index.less" />
 </head>
 
 <body>
-<script src="js/flexible.js"></script>
+  <!--头部的盒子  -->
+  <header>
+    <h1>demo-EACHARTS-jt</h1>
+    <div class="showTime">
+      <script>
+        let time = null;
+        time = setTimeout(timer, 1000);
+        function timer() {
+          clearTimeout(time);
+          dateTime = new Date();
+          let y = dateTime.getFullYear();
+          let mt = dateTime.getMonth() + 1;
+          let day = dateTime.getDate();
+          let h = dateTime.getHours();
+          let m = dateTime.getMinutes();
+          let s = dateTime.getSeconds();
+          document.querySelector('.showTime').innerHTML = `
+          当前时间：`+ y + `年` + mt + `月` + day + `-` + h + `时` + m + `分` + s + `秒`;
+          time - setTimeout(timer, 1000)
+        }
+      </script>
+    </div>
+  </header>
+  <!--页面主体盒子-->
+  <section class="mainbox">
+    <div class="column">
+      <div class="panel">
+      </div>
+    </div>
+    <div class="column item">2</div>
+    <div class="column">3</div>
+  </section>
+
+
+  <script src="js/flexible.js"></script>
 </body>
 
 </html>
