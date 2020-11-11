@@ -3,6 +3,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+li {
+  list-style: none;
+}
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
 body {
   background: url(../img/bg.jpg) no-repeat top center;
   line-height: 1.15;
@@ -27,11 +34,6 @@ header .showTime {
   color: rgba(255, 255, 255, 0.7);
   font-size: 0.25rem;
 }
-.box {
-  height: 1rem;
-  width: 1rem;
-  font-size: 0.5625rem;
-}
 .mainbox {
   display: flex;
   max-width: 1924px;
@@ -44,10 +46,129 @@ header .showTime {
 }
 .mainbox .column:nth-child(2) {
   flex: 5;
+  margin: 0 0.125rem 0.1875rem;
 }
 .mainbox .panel {
+  position: relative;
   height: 3.857rem;
   background-color: #f50;
   border: 1px solid rgba(25, 186, 139, 0.17);
-  background: url(../img/line\(1\).png);
+  margin-bottom: 0.1875rem;
+  background: url(../img/line\(1\).png) rgba(255, 255, 255, 0.04);
+}
+.mainbox .panel::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: 10px;
+  width: 10px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+}
+.mainbox .panel::after {
+  content: "";
+  position: absolute;
+  top: -2px;
+  right: -2px;
+  height: 10px;
+  width: 10px;
+  border-top: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
+}
+.mainbox .panel .panel-footer {
+  position: absolute;
+  height: 10px;
+  width: 100%;
+  bottom: 0;
+}
+.mainbox .panel .panel-footer::before {
+  position: absolute;
+  left: -2px;
+  bottom: -2px;
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-left: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+}
+.mainbox .panel .panel-footer::after {
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  content: '';
+  height: 10px;
+  width: 10px;
+  border-right: 2px solid #02a6b5;
+  border-bottom: 2px solid #02a6b5;
+}
+.mainbox h2 {
+  height: 0.6rem;
+  color: #fff;
+  line-height: 0.6rem;
+  text-align: center;
+  font-size: 0.25rem;
+  font-weight: 400;
+}
+.mainbox .chart {
+  height: 3rem;
+  background-color: #fff;
+}
+.mainbox .panel-middle {
+  margin: 0 0.1rem 0.125rem;
+  text-align: center;
+  position: relative;
+  height: 3.857rem \2;
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  margin-bottom: 0.1875rem;
+  background: url(../img/line\(1\).png) rgba(255, 255, 255, 0.04);
+}
+.no {
+  background: rgba(101, 132, 226, 0.1);
+  padding: 0.1875rem;
+}
+.no .no-hd {
+  border: 1px solid rgba(25, 186, 139, 0.17);
+  position: relative;
+}
+.no .no-hd ul {
+  display: flex;
+}
+.no .no-hd ul li {
+  position: relative;
+  flex: 1;
+  height: 1rem;
+  font-size: 0.875rem;
+  color: #dee123;
+  text-align: center;
+  font-family: electronicFont;
+}
+.no .no-hd ul li::after {
+  content: "";
+  position: absolute;
+  right: 0;
+  top: 25%;
+  height: 50%;
+  width: 0.0125rem;
+  background: rgba(255, 255, 255, 0.2);
+}
+.no .no-hd::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  height: 10px;
+  width: 30px;
+  border-top: 2px solid #02a6b5;
+  border-left: 2px solid #02a6b5;
+}
+.no .no-hd::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  right: -2px;
+  height: 10px;
+  width: 30px;
+  border-bottom: 2px solid #02a6b5;
+  border-right: 2px solid #02a6b5;
 }
