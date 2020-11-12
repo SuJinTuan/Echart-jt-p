@@ -73,13 +73,12 @@ header {
   }
 
   .panel {
-    position        : relative;
+
     height          : 3.857rem;
     background-color: #f50;
     border          : 1px solid rgba(25, 186, 139, 0.17);
     margin-bottom   : 0.1875rem;
     background      : url(../img/line\(1\).png) rgba(255, 255, 255, 0.04);
-
     &::before {
       //孩子：子爵父相
       content: "";
@@ -95,7 +94,6 @@ header {
       border-left: 2px solid #02a6b5;
 
     }
-
     &::after {
       content: "";
 
@@ -108,7 +106,6 @@ header {
       border-top  : 2px solid #02a6b5;
       border-right: 2px solid #02a6b5;
     }
-
     .panel-footer {
 
       bottom     : 0;
@@ -143,36 +140,20 @@ header {
         border-bottom: 2px solid #02a6b5;
       }
     }
+    h2 {
+      height     : 0.6rem;
+      color      : #fff;
+      line-height: 0.6rem;
+      text-align : center;
+      font-size  : 0.25rem;
+      font-weight: 400;
+    }
+    .chart {
+      height             : 3rem;
+      // background-color: pink;
+      margin             : 0 0.125rem;
+    }
   }
-
-  h2 {
-    height     : 0.6rem;
-    color      : #fff;
-    line-height: 0.6rem;
-    text-align : center;
-    font-size  : 0.25rem;
-    font-weight: 400;
-  }
-
-  .chart {
-    height          : 3rem;
-    background-color: #fff;
-  }
-
-  .panel-middle {
-    margin             : 0 0.1rem 0.125rem;
-    text-align         : center;
-    position           : relative;
-    height             : 3.857rem\2;
-    // background-color: #f50;
-    border             : 1px solid rgba(25, 186, 139, 0.17);
-    margin-bottom      : 0.1875rem;
-    background         : url(../img/line\(1\).png) rgba(255, 255, 255, 0.04);
-
-
-
-  }
-
 }
 
 .no {
@@ -245,5 +226,104 @@ header {
     }
 
 
+  }
+
+  .no-text {
+    ul {
+      display: flex;
+
+      li {
+        flex       : 1;
+        text-align : center;
+        color      : rgba(255, 255, 255, 0.7);
+        height     : 0.5rem;
+        font-size  : 0.225rem;
+        line-height: 0.5rem;
+        padding-top: 0.125rem;
+      }
+
+    }
+  }
+}
+
+.map {
+  height  : 10.125rem;
+  position: relative;
+
+  .map1 {
+    width          : 6.475rem;
+    height         : 6.475rem;
+    position       : absolute;
+    top            : 50%;
+    left           : 50%;
+    transform      : translate(-50%, -50%);
+    background     : url(../img/map.png);
+    background-size: 100% 100%;
+    opacity        : 0.3;
+
+  }
+
+  .map2 {
+    width : 8.0375rem;
+    height: 8.0375rem;
+
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+
+    background     : url(../img/lbx.png);
+    background-size: 100% 100%;
+
+    // 如果元素早下面，则上面的元素会被下面的元素压着
+    // z-index  : 2;
+    animation: rotate1 15s linear;
+  }
+
+  .map3 {
+    width : 7.075rem;
+    height: 7.075rem;
+
+    position : absolute;
+    top      : 50%;
+    left     : 50%;
+    transform: translate(-50%, -50%);
+
+    background     : url(../img/jt.png);
+    background-size: 100% 100%;
+
+    animation: rotate2 10s linear;
+    opacity  : 0.6;
+  }
+
+  .chart {
+    position           : absolute;
+    top                : 0;
+    left               : 0;
+    // background-color: pink;
+    width              : 100%;
+    height             : 10.125rem;
+  }
+
+  @keyframes rotate1 {
+    form {
+      transform: translate(-50%, -50%) rotate(0deg)
+    }
+
+    to {
+
+      transform: translate(-50%, -50%) rotate(360deg)
+    }
+  }
+
+  @keyframes rotate2 {
+    form {
+      transform: translate(-50%, -50%) rotate(0deg)
+    }
+
+    to {
+
+      transform: translate(-50%, -50%) rotate(-360deg)
+    }
   }
 }
